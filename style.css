@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #82cded;
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #49493f;
+}
+#hero {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TextLeft {
+text-align: left;
+}
+.divider {
+  height: 0;
+  width: 90vw;
+  border: 1px solid rgba(123, 129, 129, 0.3);
+  margin-bottom: 64px;
+}
+
+.topnav {
+  overflow: hidden;
+  min-height: 50px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  border-bottom: 1px solid rgba(123, 129, 129, 0.3);
+}
+.topnav-elem {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 500;
+  margin: auto;
+  color: #49493f;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 17px;
+  height: fit-content;
+  width: fit-content;
+  align-items: center;
+  border-radius: 25px;
+}
+.topnav img {
+  height: 56%;
+  width: fit-content;
+  border-radius: 110%;
+  border: 1px solid rgba(123, 129, 129, 0.2) ;
+}
+
+.expanded {
+  background-color: #5ebfe8; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px; 
+  border: 1px solid #8d9393;
+  text-decoration: none;
+  box-shadow: 
+    4px 4px 0 rgb(255, 255, 255),
+    5px 5px 0 #8d9393;
+  cursor: pointer; 
+  display: inline-block; 
+  bottom: 6px; right: 6px;
+}
+
+#Àpropos, #épisodes, #réseaux {
+  text-align: center;
+  min-height: 100vh;
+    height: fit-content;
+  width: 85vw;
+  padding: 32px 64px;
+  margin: auto auto 64px auto;
+  background-color: #ade8f4;
+  border-radius: 25px;
+  border: 1px solid rgba(123, 129, 129, 1);
+  box-shadow: 
+    14px 7px 0 rgb(255, 255, 255),
+    15px 8px 0 #8d9393;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+#Àpropos ul {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+#Àpropos p {
+  font-family: Roboto;
+  color: #49493f;
+  text-decoration: none;
+}
+#Àpropos a {
+  font-family: Roboto;
+  color: #03045e;
+  text-decoration: none;
+}
+#Àpropos a:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
+
+#épisodes {
+  background-color: #90e0ef;
+}
+
+.episode-container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 16px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);  
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  height: calc(100vh - 100px); /* Enlever la hauteur de la pagination */
+  overflow: visible;
+}
+
+.card {
+  background-color: #ade8f4;
+  border-radius: 10px;
+  border: 1px solid rgba(123, 129, 129, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+  6px 8px 0 rgb(255, 255, 255),
+  7px 9px 0 #8d9393;
+  cursor: pointer;
+}
+.card a {
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: none; /* Si tu veux également que le lien ne soit pas souligné au survol */
+}
+
+.guest-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid rgba(123, 129, 129, 1);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.episode-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.guest-name {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.episode-duration {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background-color: #ade8f4;
+  color: #49493f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid rgba(123, 129, 129, 1);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+}
+
+.pagination span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#réseaux {
+  background-color: #48cae4;
+  text-align: left;
+  justify-content: space-between;
+}
+#réseaux h1, #réseaux .GridRéseaux h2 {
+  text-align: center;
+}
+.RéseauxSousTitre {
+  height: 15%;
+}
+.GridRéseaux {
+  height: 80%;
+  display: grid;
+  column-gap: 48px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 80%;
+  /* background-color: pink; */
+}
+.FindRéseaux {
+  height: 30vh;
+}
+#réseaux .GridRéseaux a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(123, 129, 129, 1);
+  height: 100%;
+  width: 100%;
+  background-color: #90e0ef;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#réseaux .GridRéseaux a:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    6px 8px 0 rgb(255, 255, 255),
+    7px 9px 0 #8d9393;
+  cursor: pointer;
+}
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contactCTA {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 100%;
+  gap: 16px;
+}
+#Ideas img, #Requests img {
+  width: 30%;
+}
+#Ideas img {
+  transform: rotate(90deg);
+}
+#Requests img {
+  transform: rotate(-90deg);
+}
+#contact .contactCTA a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e4e6;
+  background-color: #03045e;
+  width: 100%;
+  height: 30%;
+  min-height: fit-content;
+  font-size: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  border: 1px solid rgba(123, 129, 129, 1);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#contact .contactCTA a:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    6px 8px 0 rgb(255, 255, 255),
+    7px 9px 0 #8d9393;
+  cursor: pointer;
+}
