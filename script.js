@@ -360,3 +360,15 @@ document.getElementById('next-btn').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
   displayEpisodes(currentPage);
 });
+
+let BurgerMenu = document.getElementById('BurgerMenu');
+let CloseMenu = document.getElementById('CloseMenu'); 
+let BurgerMenuLinks = document.getElementById('BurgerMenuLinks');
+let BurgerMenuLink = document.getElementsByName('#BurgerMenuLinks a');
+
+function ShowMenu() {
+  BurgerMenuLinks.style.display = 'flex';
+};
+function HideMenu() {
+  BurgerMenuLinks.style.display = 'none';
+};

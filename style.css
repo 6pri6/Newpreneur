@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body, html {
   margin: 0;
   padding: 0;
   background-color: #82cded;
   font-family: 'Poppins', sans-serif;
+  height: fit-content;
 }
 a {
   text-decoration: none;
@@ -86,7 +88,46 @@ text-align: left;
   display: inline-block; 
   bottom: 6px; right: 6px;
 }
-
+#BurgerMenu {
+  border: none;
+  border-radius: 0;
+  height: 36px;
+  transition-property: display;
+  transition-duration: 0.2s;
+}
+#CloseMenu {
+  border: none;
+  border-radius: 0;
+  height: 50px;
+  width: 50px;
+  transition-property: display;
+  transition-duration: 0.2s;
+  z-index: 101;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+#BurgerMenuLinks {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  z-index: 100;
+  background-color: #d4dbe1;
+  display: none;
+  flex-direction: column;
+  font-size: 36px;
+}
+#BurgerMenuLinksDiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
 #Àpropos, #épisodes, #réseaux {
   text-align: center;
   min-height: 100vh;
