@@ -104,14 +104,14 @@ text-align: left;
   transition-duration: 0.2s;
   z-index: 101;
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 32px;
+  left: 32px;
 }
 #BurgerMenuLinks {
-  position: sticky;
+  position: fixed;
   top: 0;
-  left: 0;
-  height: 100vh;
+  left: -100vw;
+  height: 120vh;
   width: 100vw;
   overflow-x: hidden;
   z-index: 100;
@@ -147,7 +147,9 @@ text-align: left;
   font-family: Poppins;
   font-weight: 400;
 }
-
+#Àpropos {
+  background-color: #48cae4;
+}
 #Àpropos ul {
   display: flex;
   flex-direction: column;
@@ -167,10 +169,6 @@ text-align: left;
 #Àpropos a:hover {
   color: #023e8a;
   text-decoration: underline;
-}
-
-#épisodes {
-  background-color: #90e0ef;
 }
 
 .episode-container {
@@ -216,6 +214,9 @@ text-align: left;
   7px 9px 0 #8d9393;
   cursor: pointer;
 }
+.card h2 {
+  font-size: 14px;
+}
 .card a {
   text-decoration: none;
 }
@@ -237,16 +238,10 @@ text-align: left;
   text-align: center;
 }
 
-.episode-title {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
 .guest-name {
   font-size: 1rem;
   color: #777;
-  margin-bottom: 5px;
+
 }
 
 .episode-duration {
@@ -281,7 +276,7 @@ text-align: left;
 }
 
 #réseaux {
-  background-color: #48cae4;
+  background-color: #90e0ef;
   text-align: left;
   justify-content: space-between;
 }
@@ -371,6 +366,28 @@ text-align: left;
     7px 9px 0 #8d9393;
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  #épisodes {
+    padding: 16px;
+  }
+  .episode-container {
+    line-height: 1.5;
+    padding: 0;
+    gap: 16px;
+    background-color: beige;
+  }
+  .card-container {
+    gap: 16px;
+  }
+  .card {
+    line-height: 1.2;
+  }
+  #épisodes p {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 720px) {
   .topnav {
     justify-content: space-between;
@@ -381,5 +398,44 @@ text-align: left;
   .DisplayNone {
     display: block;
   }
+  #Àpropos {
+    padding: 16px 16px 0 0;
+  }
+  #Àpropos h1 {
+    font-size: 24px;
+  }
+  #Àpropos h2 {
+    font-size: 16px;
+  }
+  #Àpropos p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  #épisodes {
+    padding: 8px 8px;
+  }
+  .card-container {
+    gap: 4px;
+  }
 }
+
+@media (max-width: 500px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);  
+  }
+  .card {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card p {
+    display: none;
+  }
+  #épisodes h2 {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
 

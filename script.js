@@ -48,7 +48,7 @@ const episodes = [
     episodeLink: "https://open.spotify.com/episode/3Degwdo1h8ctFfXYAuTq7t?si=17058e166d504b91"
   },
   {
-    title: "#06 S'il n'y a plus de galères, c'est mauvais signe",
+    title: "#06 La lean start-up",
     guest: "Benjamin Guéroui",
     duration: "56 min",
     image: "images/Benjamin Gueroui.jpg",
@@ -251,53 +251,27 @@ const reversedEpisodes = episodes.reverse();
 
 // Pagination parameters
 let currentPage = 1;
-const episodesPerPage = 6;
+let episodesPerPage = 6; // Valeur par défaut
+
+function adjustEpisodesPerPage() {
+  if (window.matchMedia("(max-width: 500px)").matches) {
+    episodesPerPage = 4; // Si l'écran est inférieur à 768px de large, afficher 3 épisodes par page
+  } else {
+    episodesPerPage = 6; // Sinon, afficher 6 épisodes par page
+  }
+
+  // Appelle la fonction de réaffichage pour appliquer le changement
+  displayEpisodes(currentPage);
+}
+
+// Appelle cette fonction au chargement de la page pour vérifier la taille initiale
+window.addEventListener('load', adjustEpisodesPerPage);
+
+// Appelle cette fonction à chaque redimensionnement de l'écran
+window.addEventListener('resize', adjustEpisodesPerPage);
+
 const totalPages = Math.ceil(reversedEpisodes.length / episodesPerPage);
 
-// Fonction pour créer une card HTML 
-
-/*
-function createCard(episode) {
-  const card = document.createElement('div');
-  card.classList.add('card');
-
-  // Créer un lien qui redirige vers l'URL de l'épisode
-  const link = document.createElement('a');
-  link.href = episode.episodeLink;
-  link.target = '_blank'; // Ouvre dans un nouvel onglet
-
-  const img = document.createElement('img');
-  img.src = episode.image;
-  img.alt = `Photo de l'invité ${episode.guest}`;
-  img.classList.add('guest-image');
-
-  const cardContent = document.createElement('div');
-  cardContent.classList.add('card-content');
-
-  const episodeTitle = document.createElement('h2');
-  episodeTitle.classList.add('episode-title');
-  episodeTitle.textContent = episode.title;
-
-  const guestName = document.createElement('p');
-  guestName.classList.add('guest-name');
-  guestName.textContent = `Invité: ${episode.guest}`;
-
-  const episodeDuration = document.createElement('p');
-  episodeDuration.classList.add('episode-duration');
-  episodeDuration.textContent = `Durée: ${episode.duration}`;
-
-  cardContent.appendChild(episodeTitle);
-  cardContent.appendChild(guestName);
-  cardContent.appendChild(episodeDuration);
-
-  card.appendChild(img);
-  card.appendChild(cardContent);
-
-  link.appendChild(card);
-
-  return card;
-}
-*/
 // Fonction pour créer une card HTML en utilisant innerHTML
 function createCard(episode) {
   const card = document.createElement('div');
@@ -361,13 +335,13 @@ document.addEventListener('DOMContentLoaded', () => {
   displayEpisodes(currentPage);
 });
 
-let BurgerMenu = document.getElementById('BurgerMenu');
-let CloseMenu = document.getElementById('CloseMenu'); 
+
 let BurgerMenuLinks = document.getElementById('BurgerMenuLinks');
-let BurgerMenuLink = document.getElementsByName('#BurgerMenuLinks a');
+
 
 function ShowMenu() {
   BurgerMenuLinks.style.display = 'flex';
+  BurgerMenuLinks.style.left = '0px';
 };
 function HideMenu() {
   BurgerMenuLinks.style.display = 'none';
