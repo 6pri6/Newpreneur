@@ -251,7 +251,7 @@ const reversedEpisodes = episodes.reverse();
 
 // Pagination parameters
 let currentPage = 1;
-let episodesPerPage = 6; // Valeur par défaut
+let episodesPerPage = 6; // Valeur par défauts
 
 function adjustEpisodesPerPage() {
   if (window.matchMedia("(max-width: 500px)").matches) {
@@ -270,23 +270,22 @@ window.addEventListener('load', adjustEpisodesPerPage);
 // Appelle cette fonction à chaque redimensionnement de l'écran
 window.addEventListener('resize', adjustEpisodesPerPage);
 
-const totalPages = Math.ceil(reversedEpisodes.length / episodesPerPage);
 
 // Fonction pour créer une card HTML en utilisant innerHTML
 function createCard(episode) {
   const card = document.createElement('div');
   card.classList.add('card');
-
+  
   // Insérer le contenu de la carte directement en HTML
   card.innerHTML = `
-    <a href="${episode.episodeLink}" target="_blank">
-      <img src="${episode.image}" alt="Photo de l'invité ${episode.guest}" class="guest-image" />
-      <div class="card-content">
-        <h2 class="episode-title">${episode.title}</h2>
-        <p class="guest-name">Invité: ${episode.guest}</p>
-        <p class="episode-duration">Durée: ${episode.duration}</p>
-      </div>
-    </a>
+  <a href="${episode.episodeLink}" target="_blank">
+  <img src="${episode.image}" alt="Photo de l'invité ${episode.guest}" class="guest-image" />
+  <div class="card-content">
+  <h2 class="episode-title">${episode.title}</h2>
+  <p class="guest-name">Invité: ${episode.guest}</p>
+  <p class="episode-duration">Durée: ${episode.duration}</p>
+  </div>
+  </a>
   `;
   
   return card;
@@ -297,19 +296,19 @@ function createCard(episode) {
 function displayEpisodes(page) {
   const cardContainer = document.getElementById('card-container');
   cardContainer.innerHTML = ''; // Vide le container avant d'ajouter les nouvelles cards
-
+  
   const startIndex = (page - 1) * episodesPerPage;
   const endIndex = startIndex + episodesPerPage;
   const episodesToDisplay = reversedEpisodes.slice(startIndex, endIndex);
-
+  
   episodesToDisplay.forEach(episode => {
     const card = createCard(episode);
     cardContainer.appendChild(card);
   });
-
+  
   // Met à jour le numéro de la page
   document.getElementById('page-number').textContent = page;
-
+  
   // Gère l'état des boutons
   document.getElementById('prev-btn').disabled = page === 1;
   document.getElementById('next-btn').disabled = page === totalPages;
@@ -346,3 +345,4 @@ function ShowMenu() {
 function HideMenu() {
   BurgerMenuLinks.style.display = 'none';
 };
+const totalPages = Math.ceil(reversedEpisodes.length / episodesPerPage);

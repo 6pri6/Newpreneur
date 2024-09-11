@@ -194,7 +194,7 @@ text-align: left;
 }
 
 .card {
-  background-color: #ade8f4;
+  background-color: #caf0f8;
   border-radius: 10px;
   border: 1px solid rgba(123, 129, 129, 1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -258,7 +258,7 @@ text-align: left;
 
 .pagination button {
   padding: 10px 20px;
-  background-color: #ade8f4;
+  background-color: #caf0f8;
   color: #49493f;
   border: none;
   border-radius: 5px;
@@ -285,6 +285,7 @@ text-align: left;
 }
 .RéseauxSousTitre {
   height: 15%;
+  width: fit-content;
 }
 .GridRéseaux {
   height: 80%;
@@ -292,19 +293,24 @@ text-align: left;
   column-gap: 48px;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 80%;
-  /* background-color: pink; */
 }
 .FindRéseaux {
   height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #réseaux .GridRéseaux a {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(123, 129, 129, 1);
+  padding: 16px;
   height: 100%;
   width: 100%;
-  background-color: #90e0ef;
+  background-color: #ade8f4;
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -375,7 +381,6 @@ text-align: left;
     line-height: 1.5;
     padding: 0;
     gap: 16px;
-    background-color: beige;
   }
   .card-container {
     gap: 16px;
@@ -418,6 +423,30 @@ text-align: left;
   .card-container {
     gap: 4px;
   }
+  .FindRéseaux {
+    height: fit-content;
+  }
+  .FindRéseaux h2 {
+    font-size: 16px;
+  }
+  #contact {
+    flex-direction: column;
+  }
+  .contactCTA {
+    flex-direction: column;
+  }
+  #Ideas img {
+    transform: rotate(180deg);
+  }
+  #Requests img {
+    transform: rotate(0deg);
+  }
+  #Ideas img, #Requests img {
+    width: 50%;
+  }
+  #contactCTAbutton {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 500px) {
@@ -435,6 +464,12 @@ text-align: left;
   #épisodes h2 {
     font-size: 12px;
     width: 100%;
+  }
+  .GridRéseaux {
+    height: fit-content;
+  }
+  .FindRéseaux h2 {
+    font-size: 12px;
   }
 }
 
