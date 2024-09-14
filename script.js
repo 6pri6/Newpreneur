@@ -243,6 +243,20 @@ const episodes = [
     image: "images/mehdi el azhari.jpg",
     episodeLink: "https://open.spotify.com/episode/1D7HFadMQiF4eiu4PfDzuZ?si=865cfcd435ab4c28"
   },
+  {
+    title: "#32 Le CEO qui aide les CEO",
+    guest: "Éric Devaulx",
+    duration: "80 min",
+    image: "images/eric devaulx.jpg",
+    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=249a45d350a24e9c"
+  },
+  {
+    title: "#33 On réussit des business",
+    guest: "Benoît Vasseur",
+    duration: "81 min",
+    image: "images/benoit vasseur.jpg",
+    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=94ccde92d0194e54"
+  },
 ];
 
 
