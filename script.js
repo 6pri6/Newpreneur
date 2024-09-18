@@ -255,7 +255,7 @@ const episodes = [
     guest: "Benoît Vasseur",
     duration: "81 min",
     image: "images/benoit vasseur.jpg",
-    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=94ccde92d0194e54"
+    episodeLink: "https://open.spotify.com/episode/1gW7uWgbyUoH2VO0Tf4IT7?si=1f62d018e5984b5a"
   },
 ];
 
