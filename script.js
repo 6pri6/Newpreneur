@@ -257,6 +257,13 @@ const episodes = [
     image: "images/benoit vasseur.jpg",
     episodeLink: "https://open.spotify.com/episode/1gW7uWgbyUoH2VO0Tf4IT7?si=1f62d018e5984b5a"
   },
+  {
+    title: "#34 Une autre manière d'entreprendre",
+    guest: "Gauthier Monserand",
+    duration: "78 min",
+    image: "images/gauthier monserand.jpg",
+    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=b51ad57a93a5431b"
+  },
 ];
 
 
