@@ -262,7 +262,7 @@ const episodes = [
     guest: "Gauthier Monserand",
     duration: "78 min",
     image: "images/gauthier monserand.jpg",
-    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=b51ad57a93a5431b"
+    episodeLink: "https://open.spotify.com/episode/7cl3mzmLwbSamVx4A2hUEx?si=02731c5926d24d7e"
   },
 ];
 
