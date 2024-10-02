@@ -264,6 +264,13 @@ const episodes = [
     image: "images/gauthier monserand.jpg",
     episodeLink: "https://open.spotify.com/episode/7cl3mzmLwbSamVx4A2hUEx?si=02731c5926d24d7e"
   },
+  {
+    title: "#35 De bootstrap à 2.5M€ en levée de fonds",
+    guest: "David Keribin",
+    duration: "80 min",
+    image: "images/photo david keribin .jpg",
+    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=a9767e12e09f43e3"
+  },
 ];
 
 
