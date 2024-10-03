@@ -269,7 +269,7 @@ const episodes = [
     guest: "David Keribin",
     duration: "80 min",
     image: "images/photo david keribin .jpg",
-    episodeLink: "https://open.spotify.com/show/5VC9tutkSSnTjxGRcTlxU1?si=a9767e12e09f43e3"
+    episodeLink: "https://open.spotify.com/episode/2yWbs3rGcINVTfeYLbCzur?si=8a48a09d2b694f64"
   },
 ];
 
